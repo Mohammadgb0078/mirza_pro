@@ -315,6 +315,53 @@ if (isset($_POST['login'])) {
             word-break: break-all; /* جلوگیری از بیرون زدن متن IP */
         }
 
+        .login-footer {
+            margin-top: 35px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+            opacity: 0.85;
+        }
+
+        .login-footer p {
+            margin-bottom: 6px;
+            line-height: 1.8;
+        }
+
+        .login-footer small {
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        .footer-links {
+            margin-right: 6px;
+        }
+
+        .footer-links a {
+            color: var(--aurora-green);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #a7f3d0;
+            opacity: 1;
+        }
+
+        .footer-links .dot {
+            margin: 0 6px;
+            color: #475569;
+        }
+
+        /* موبایل */
+        @media screen and (max-width: 480px) {
+            .login-footer {
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 
@@ -396,7 +443,17 @@ if (isset($_POST['login'])) {
                         ورود به پنل
                     </button>
                 </div>
-
+            <footer class="login-footer">
+                <p>
+                    MirzabotPro Installer · Made with ♥  
+                    <span class="footer-links">
+                        <a href="https://github.com/Mmd-Amir/mirza_pro/releases/" target="_blank">GitHub</a>
+                        <span class="dot">•</span>
+                        <a href="https://t.me/+COMDGvsapck0NzE0" target="_blank">Telegram</a>
+                    </span>
+                </p>
+                <small>© <?php echo date('Y'); ?></small>
+            </footer>
             </form>
         </div>
     <?php } ?>

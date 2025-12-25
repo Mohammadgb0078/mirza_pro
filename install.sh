@@ -734,7 +734,7 @@ function install_bot() {
 if [[ "$1" == "-v" && "$2" == "beta" ]] || [[ "$1" == "-beta" ]] || [[ "$1" == "-" && "$2" == "beta" ]]; then
     ZIP_URL="https://github.com/Mmd-Amir/mirza_pro/archive/refs/heads/main.zip"
 elif [[ "$1" == "-v" && -n "$2" ]]; then
-    ZIP_URL="https://github.com/Mmd-Amir/mirza_pro/mirza_pro/archive/refs/tags/$2.zip"
+    ZIP_URL="https://github.com/Mmd-Amir/mirza_pro/archive/refs/tags/$2.zip"
 fi
 
     TEMP_DIR="/tmp/mirzabot"
