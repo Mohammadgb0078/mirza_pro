@@ -1533,9 +1533,330 @@ function ensureTableAndColumn(mysqli $mysqli, string $table, string $column): vo
                 transform: rotate(90deg);
             }
         }
+        input,textarea,select {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body {
+            background: linear-gradient(135deg, #7e66f4ff, #2cd6edff);
+            color: #2e1065;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15);
+        }
+
+        /* Titles */
+        h1, h2, h3 {
+            color: #7c3aed !important;
+        }
+
+        /* Wizard steps */
+        .wizard-step-number {
+            background: #ede9fe;
+            border-color: #c4b5fd;
+            color: #7c3aed;
+        }
+
+        .wizard-step.active .wizard-step-number {
+            background: #8b5cf6;
+            border-color: #7c3aed;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+        }
+
+        .wizard-step.completed .wizard-step-number {
+            background: #a78bfa;
+            border-color: #8b5cf6;
+            color: #fff;
+        }
+
+        .wizard-step-label {
+            color: #5b21b6;
+        }
+
+        /* Cards (server / install type) */
+        .server-type-card,
+        .install-type-card {
+            background: #faf5ff;
+            border-color: #c4b5fd;
+        }
+
+        .server-type-card:hover,
+        .install-type-card:hover {
+            background: #ede9fe;
+            border-color: #8b5cf6;
+        }
+
+        .server-type-card.active,
+        .install-type-card.active {
+            background: #ddd6fe;
+            border-color: #7c3aed;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Inputs */
+        input,
+        textarea,
+        select {
+            background: #faf5ff;
+            border: 2px solid #c4b5fd;
+            border-radius: 8px;
+            color: #2e1065;
+            direction: ltr;
+            text-align: left;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #8b5cf6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+        }
+
+        /* Buttons */
+        button,
+        .wizard-btn {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            border: none !important;
+            color: #fff !important;
+        }
+
+        button:hover,
+        .wizard-btn:hover {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            box-shadow: 0 6px 18px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Backup buttons */
+        .backup-btn {
+            background: #faf5ff7c;
+            border-color: #c4b5fd;
+            color: #4c1d95;
+        }
+
+        .backup-btn.active {
+            background: #8b5cf6;
+            border-color: #7c3aed;
+            color: #fff;
+        }
+
+        /* Alerts */
+        .alert-success {
+            background: #ede9fe;
+            border-color: #8b5cf6;
+            color: #4c1d95;
+        }
+
+        .alert-danger {
+            background: #fdf2f8;
+            border-color: #f472b6;
+            color: #9d174d;
+        }
+
+        /* Footer */
+        footer {
+            color: #6d28d9;
+        }
+
+        footer a {
+            color: #7c3aed;
+        }
+
+        footer a:hover {
+            color: #5b21b6;
+        }
+        /* ================= DARK MODE ================= */
+        body.dark {
+            background: linear-gradient(135deg, #0f172a, #020617);
+            color: #e5e7eb;
+        }
+
+        /* Container */
+        body.dark .container {
+            background: #020617;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Titles */
+        body.dark h1,
+        body.dark h2,
+        body.dark h3 {
+            color: #38bdf8 !important;
+        }
+
+        /* Wizard steps */
+        body.dark .wizard-step-number {
+            background: #020617;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+
+        body.dark .wizard-step.active .wizard-step-number {
+            background: #0284c7;
+            border-color: #38bdf8;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+        }
+
+        body.dark .wizard-step.completed .wizard-step-number {
+            background: #0ea5e9;
+            border-color: #38bdf8;
+            color: #fff;
+        }
+
+        body.dark .wizard-step-label {
+            color: #cbd5f5;
+        }
+
+        /* Cards */
+        body.dark .server-type-card,
+        body.dark .install-type-card {
+            background: #020617;
+            border-color: #334155;
+        }
+
+        body.dark .server-type-card:hover,
+        body.dark .install-type-card:hover {
+            background: #020617;
+            border-color: #38bdf8;
+        }
+
+        body.dark .server-type-card.active,
+        body.dark .install-type-card.active {
+            background: #020617;
+            border-color: #38bdf8;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+        }
+
+        /* Inputs */
+        body.dark input,
+        body.dark textarea,
+        body.dark select {
+            background: #020617;
+            border-color: #334155;
+            color: #e5e7eb;
+        }
+
+        body.dark input:focus,
+        body.dark textarea:focus,
+        body.dark select:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Buttons */
+        body.dark button,
+        body.dark .wizard-btn {
+            background: linear-gradient(135deg, #0284c7, #0ea5e9);
+            color: #fff !important;
+        }
+
+        body.dark button:hover,
+        body.dark .wizard-btn:hover {
+            background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+        }
+
+        /* Backup buttons */
+        body.dark .backup-btn {
+            background: #020617;
+            border-color: #334155;
+            color: #e5e7eb;
+        }
+
+        body.dark .backup-btn.active {
+            background: #0284c7;
+            border-color: #38bdf8;
+            color: #fff;
+        }
+
+        /* Alerts */
+        body.dark .alert-success {
+            background: #022c22;
+            border-color: #22c55e;
+            color: #86efac;
+        }
+
+        body.dark .alert-danger {
+            background: #450a0a;
+            border-color: #ef4444;
+            color: #fecaca;
+        }
+
+        /* Footer */
+        body.dark footer {
+            color: #94a3b8;
+        }
+
+        body.dark footer a {
+            color: #38bdf8;
+        }
+
+        body.dark footer a:hover {
+            color: #7dd3fc;
+        }
+        /* Theme Toggle Button */
+        #theme-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #7c3aed;
+        font-size: 20px;
+
+        box-shadow:
+        0 8px 25px rgba(139, 92, 246, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+        transition: all 0.25s ease;
+        z-index: 9999;
+}
+
+#theme-toggle:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow:
+        0 12px 35px rgba(139, 92, 246, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Dark Mode Button */
+body.dark #theme-toggle {
+    background: rgba(2, 6, 23, 0.75);
+    color: #38bdf8;
+    box-shadow:
+        0 8px 25px rgba(56, 189, 248, 0.35),
+        inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+}
+
+body.dark #theme-toggle:hover {
+    box-shadow:
+        0 12px 35px rgba(56, 189, 248, 0.45),
+        inset 0 0 0 1px rgba(148, 163, 184, 0.35);
+}
+
     </style>
 </head>
 <body>
+    <button id="theme-toggle" style="float:left;">
+        <i class="fas fa-moon"></i>
+    </button>
     <div class="container">
         <h1><i class="fas fa-cog"></i> نصب خودکار ربات میرزا پرو</h1>
         <?php if (!empty($ERROR)): ?>
@@ -1722,6 +2043,29 @@ function ensureTableAndColumn(mysqli $mysqli, string $table, string $column): vo
         </footer>
     </div>
         <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+
+        function setTheme(mode) {
+            if (mode === 'dark') {
+                document.body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        // Toggle
+        toggleBtn.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark');
+            setTheme(isDark ? 'light' : 'dark');
+        });
         let currentStep = <?php echo (int)$currentStep; ?>;
         const totalWizardSteps = 3;
         let currentInstallField = <?php echo (int)$currentInstallField; ?>;
