@@ -17,6 +17,8 @@ function panel_login_cookie($code_panel)
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => "username={$panel['username_panel']}&password=" . urlencode($panel['password_panel']),
         CURLOPT_COOKIEJAR => 'cookie.txt',
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => false,
     ));
     $response = curl_exec($curl);
     if (curl_error($curl)) {
