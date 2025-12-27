@@ -1476,7 +1476,7 @@ $textconnect
     $marzban_list_get = select("marzban_panel", "*", "name_panel", $nameloc['Service_location'], "select");
     $ManagePanel->RemoveUser($nameloc['Service_location'], $nameloc['username']);
     update('invoice', 'status', 'removebyuser', 'id_invoice', $id_invoice);
-    $tetremove = "ادمین عزیز یک کاربر سرویس خود را پس از پایان حجم یا زمان حدف کرده است
+    $tetremove = "ادمین عزیز یک کاربر سرویس خود را پس از پایان حجم یا زمان حذف کرده است
 نام کاربری کانفیک : {$nameloc['username']}";
     if (strlen($setting['Channel_Report'] ?? '') > 0) {
         telegram('sendmessage', [
